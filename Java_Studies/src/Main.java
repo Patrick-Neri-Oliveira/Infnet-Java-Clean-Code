@@ -73,9 +73,10 @@ public class Main {
         out.printf("Somando todos os pagtos: %s%n", todosPagtosSomados);
 
         out.println("\n--- Exercício 05 ---");
-        out.printf("Contando produtos vendidos para o Cliente A : %s%n", pagamentoMaria.getProdutos().size());
-        out.printf("Contando produtos vendidos para o Cliente B : %s%n", pagamentoJonas.getProdutos().size());
-        out.printf("Contando produtos vendidos para o Cliente C : %s%n", pagamentoAndre.getProdutos().size());
+        out.printf("Contando produtos vendidos para o Cliente Maria : %s%n", pagamentoMaria.getProdutos().size());
+        out.printf("Contando produtos vendidos para o Cliente Jonas : %s%n", pagamentoJonas.getProdutos().size());
+        out.printf("Contando produtos vendidos para o Cliente Andre : %s%n", pagamentoAndre.getProdutos().size());
+        out.printf("Contando produtos vendidos para o Cliente Camila : %s%n", pagamentoCamila.getProdutos().size());
 
         OptionalInt contadorProdutosTotaisVendidos = pagamentos.stream().mapToInt(pagamento -> pagamento.getProdutos().size()).reduce(Integer::sum);
         out.printf("Contando total de produtos vendidos: %s%n", contadorProdutosTotaisVendidos.getAsInt());
